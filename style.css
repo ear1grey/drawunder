@@ -1,0 +1,32 @@
+body {
+  margin: auto;
+  width: clamp(20em, 80%, 50em);
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+span.c {
+  display: inline-block;
+}
+
+canvas, article {
+  transition: 2s ease-in-out;
+}
+
+article {
+  cursor: cell;
+  min-height: 100vh;
+}
+
+.perspective canvas {
+  transform: perspective(1500px) translateX(-100px) rotateY(45deg) scale(.8);
+  background-color: #ccc;
+}
+
+.perspective article {
+  transform: perspective(1500px) translateX(100px) rotateY(45deg) scale(.9);
+}
